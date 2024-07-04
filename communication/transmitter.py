@@ -1,5 +1,8 @@
+from communication.mapper_interface import MapperInterface
+
+
 class Transmitter:
-    def __init__(self, encoder, mapper):
+    def __init__(self, encoder, mapper: MapperInterface):
         self.encoder = encoder
         self.mapper = mapper
     
