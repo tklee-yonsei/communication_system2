@@ -9,7 +9,7 @@ def test_qam_mapper():
         0, 0, 0, 0, 1, 1, 1, 1
     ])
     mapped_data = np.array([
-        -3 -3j,
+        -3 - 3j,
         1 + 1j
     ])
     map_and_test(
