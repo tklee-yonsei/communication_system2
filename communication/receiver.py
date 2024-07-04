@@ -1,5 +1,8 @@
+from communication.demapper_interface import DemapperInterface
+
+
 class Receiver:
-    def __init__(self, decoder, demapper):
+    def __init__(self, decoder, demapper: DemapperInterface):
         self.decoder = decoder
         self.demapper = demapper
     

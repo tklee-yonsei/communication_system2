@@ -2,8 +2,12 @@ import numpy as np
 
 from communication.decoder import Decoder
 from communication.demapper import Demapper
+from communication.demapper_interface import DemapperInterface
 from communication.encoder import Encoder
 from communication.mapper import Mapper
+from communication.mapper_interface import MapperInterface
+from communication.qam_demapper import QAMDemapper
+from communication.qam_mapper import QAMMapper
 from communication.receiver import Receiver
 from communication.transmitter import Transmitter
 from noise.awgn_noise import AWGNNoise
@@ -12,8 +16,10 @@ from noise.no_noise import NoNoise
 def main():
     data = np.random.randint(0, 2, 100)
     encoder = Encoder()
-    mapper = Mapper()
-    demapper = Demapper()
+    # mapper: MapperInterface = Mapper()
+    # demapper: DemapperInterface = Demapper()
+    mapper: MapperInterface = QAMMapper()
+    demapper: DemapperInterface = QAMDemapper()
     decoder = Decoder()
 
     transmitter = Transmitter(encoder, mapper)
