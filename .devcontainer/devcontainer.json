@@ -1,0 +1,12 @@
+{
+    "name": "Python Simple Communication System",
+    "context": "..",
+    "dockerFile": "../Dockerfile",
+    "runArgs": [
+        "--init",
+        "--rm",
+        "-v",
+        "${localWorkspaceFolder}:/app"
+    ],
+    "workspaceFolder": "/app"
+}
