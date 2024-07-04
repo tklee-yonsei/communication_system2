@@ -14,6 +14,4 @@ def apply_noise_and_test(
             signal, noisy_signal), f"Noise가 서로 다릅니다."
     # 노이즈가 있는 채널을 통과하는 경우
     else:
-        assert not np.array_equal(
-            signal, noisy_signal), 
-            f"{noise_interface.__class__.__name__} failed."
+        assert not np.array_equal(signal, noisy_signal), f"{noise_interface.__class__.__name__} failed."
